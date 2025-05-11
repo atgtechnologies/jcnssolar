@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --breakpoint-split: 850px;
+  --breakpoint-split: 55rem /* 880px */;
   --color-neutral-100: #000033;
+  --color-neutral-400: #e4e7ec;
   --color-primary: #00482f;
   --color-grayy: #6b7280;
   --color-yellow: #f18d01;
