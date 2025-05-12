@@ -1,6 +1,11 @@
+import BackToTop from "./backToTop";
+
 const Footer = () => {
   return (
-    <div className="bg-[#F0FDF6] mt-[30px]">
+    <div className="bg-[#F0FDF6] mt-[207px] relative">
+      <div className="md:hidden">
+        <BackToTop />
+      </div>
       <div className="md:flex py-16">
         <div>
           <img src="./images/logo.png" className="w-[214px] md:me-[96px] mb-4 md:mb-10" />
