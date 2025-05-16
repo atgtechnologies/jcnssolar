@@ -31,8 +31,8 @@ const Navbar = () => {
           <NavLink href="/about" active={pathname == "/about"}>
             About Us
           </NavLink>
-          <NavLink href="/testimonial" active={pathname == "/testimonial"}>
-            Testimonials
+          <NavLink href="/contact" active={pathname == "/contact"}>
+            Contact Us
           </NavLink>
         </ul>
         <span className="min-split:hidden flex items-center cursor" onClick={() => setOpen(true)}>

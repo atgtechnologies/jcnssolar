@@ -3,7 +3,7 @@ import BackToTop from "./backToTop";
 const Footer = () => {
   return (
     <div className="bg-[#F0FDF6] mt-[207px] relative">
-      <div className="md:hidden">
+      <div className="cursor-pointer">
         <BackToTop />
       </div>
       <div className="md:flex py-16">
