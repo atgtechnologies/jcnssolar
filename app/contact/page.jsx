@@ -3,11 +3,7 @@ import ContactUsSection from "@/app/components/contact-section";
 
 const Contact = () => {
   return (
-    <div className="space-y-10">
-      <div className="space-y-[10px]">
-        <h1 className="text-[36px] text-neutral-100 font-bold ">Contact Us </h1>
-        <h4 className="text-[18px] text-[#000011]">Get in touch</h4>
-      </div>
+    <div className="space-y-10 split:mt-10">
       <ContactUsSection />
       <div className="mt-20">
         <FaqQuestions />

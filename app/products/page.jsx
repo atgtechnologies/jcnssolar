@@ -25,14 +25,15 @@ import inverter3 from "@/app/components/images/Inverter 3.png";
 import inverter4 from "@/app/components/images/Inverter 4.png";
 import inverter5 from "@/app/components/images/Inverter 5.png";
 import inverter6 from "@/app/components/images/inverter 6.png";
+import SubHeading from "../components/subheading";
 
 const Products = () => {
   return (
-    <div className="space-y-8">
-      <h1 className="text-[36px] text-neutral-100 font-bold ">Our Product Gallery</h1>
+    <div className="space-y-8 contentMargin">
+      <SubHeading>Our Product Gallery</SubHeading>
 
       <ProductSegmentation title="Solar Panels">
-        <div className="flex flex-wrap gap-x-4">
+        <div className="flex flex-wrap gap-4">
           <Product
             className=""
             image={solar1}
