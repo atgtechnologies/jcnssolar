@@ -2,27 +2,31 @@
 import Link from "next/link";
 import NavLink from "./navlink";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "auto";
+  }, [open]);
   return (
-    <nav className="py-4">
-      <div className="flex justify-between border-b-[#EFF0F3] border-b">
+    <nav className="py-4 overflow-hidden">
+      <div className="flex justify-between border-b-[#EFF0F3] border-b contentMargin max-split:max-w-full max-split:w-full">
         <Link href="/">
           <img className="w-[100px] sm:w-[157px]" src="./images/logo.png" alt="Jcns Solar power Logo " />
         </Link>
         <ul
           className={
             "split:flex gap-x-6 max-split:h-screen max-split:z-20 max-split:w-full max-split:bg-white max-split:fixed max-split:top-0 transition-transform duration-200 " +
-            (open ? "max-split:translate-x-0" : "max-split:translate-x-full")
+            (open ? "max-split:translate-x-0 max-split:left-0" : "max-split:translate-x-full")
           }
         >
           <li className="py-2 flex justify-end split:hidden max-split:mb-10" onClick={() => setOpen(false)}>
             close
           </li>
-          <NavLink href="/about" active={pathname == "/" || pathname == ""}>
+          <NavLink href="/" active={pathname == "/" || pathname == ""}>
             Home
           </NavLink>
           <NavLink href="/products" active={pathname == "/products"}>

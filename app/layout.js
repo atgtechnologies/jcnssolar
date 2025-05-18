@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${satoshiVariable.variable} antialiased`}>
+      <body className={`${satoshiVariable.variable} antialiased overflow-x-hidden max-w-full`}>
         <Navbar />
         {children}
         <Footer />

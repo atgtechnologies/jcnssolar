@@ -1,6 +1,6 @@
 const CustomerReview = ({ children, image }) => {
   return (
-    <div className="bg-primary col-span-1 rounded-[20px] py-[55px] px-[69px] relative h-auto ">
+    <div className="bg-primary col-span-1 rounded-[20px] py-[55px] px-[11px] lg:px-[69px] relative h-auto ">
       <span className="absolute flex top-0 left-0 w-full h-full justify-end">
         <svg width="596" height="330" viewBox="0 0 596 330" fill="none">
           <path
@@ -180,7 +180,7 @@ const CustomerReview = ({ children, image }) => {
         </svg>
       </span>
 
-      <div className="flex gap-x-8 w-full">
+      <div className="space-y-8 split:flex gap-x-8 w-full">
         <div className="relative shrink-0 ">
           <img src={image} alt="" className="block w-[174px] h-[187px] rounded-bl-[50px] rounded-tl-[50px] rounded-br-[50px]" />
           <span className="block absolute top-[5px] left-0 w-[186px] h-[199px] border-2 border-[#D3FDE8] rounded-bl-[50px] rounded-tl-[50px] rounded-br-[50px]"></span>

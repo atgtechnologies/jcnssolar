@@ -33,3 +33,13 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.contentMargin {
+  padding-inline: 64px;
+}
+
+@media screen and (max-width: 880px) {
+  .contentMargin {
+    padding-inline: 24px;
+  }
+}

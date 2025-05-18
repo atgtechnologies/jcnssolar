@@ -2,14 +2,14 @@ import BackToTop from "./backToTop";
 
 const Footer = () => {
   return (
-    <div className="bg-[#F0FDF6] mt-[207px] relative">
+    <div className="bg-[#F0FDF6] split:mt-[207px] relative">
       <div className="cursor-pointer">
         <BackToTop />
       </div>
-      <div className="md:flex py-16">
+      <div className="contentMargin md:flex py-16">
         <div>
           <img src="./images/logo.png" className="w-[214px] md:me-[96px] mb-4 md:mb-10" />
-          <ul className="gap-y-4 text-sm">
+          <ul className="space-y-4 text-sm">
             <li>25 Street, Ikeja, Lagos</li>
             <li>Phone: 09027389374</li>
             <li>Email : york@jcnssolar.com</li>
@@ -39,7 +39,7 @@ const Footer = () => {
               </li>
             </ul>
             <ul className="text-sm space-y-3 md:space-y-6">
-              <li className="text-[18px] font-bold">Quick Links</li>
+              <li className="text-[18px] font-bold">Products</li>
               <li>
                 <a href="">Solar Panels </a>
               </li>

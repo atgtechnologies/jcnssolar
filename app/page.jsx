@@ -3,20 +3,28 @@ import Button from "./components/button";
 import GreenCard from "./components/greencard";
 import RectangleSvg from "./components/svg/rectanglepatterns";
 import radioImage from "./components/images/radio.png";
-import product1 from "./components/images/product1.png";
-import product2 from "./components/images/product2.png";
-import product3 from "./components/images/product3.png";
-import product4 from "./components/images/product4.png";
+import ProductSegmentation from "./components/products/Segmentation";
+import solar1 from "@/app/components/images/panel 1.png";
+import solar2 from "@/app/components/images/panel 21.png";
+import solar3 from "@/app/components/images/panel 31.png";
+import solarfan1 from "@/app/components/images/solar fan 1.png";
+import solarfan2 from "@/app/components/images/solar fan 2.png";
+import solarfan3 from "@/app/components/images/solar fan 4.png";
+// import product1 from "./components/images/product1.png";
+// import product2 from "./components/images/product2.png";
+// import product3 from "./components/images/product3.png";
+// import product4 from "./components/images/product4.png";
 import SubHeading from "./components/subheading";
 import CustomerReview from "./components/CustomerReview";
 import FullStar from "./fullstar";
 import HalfStar from "./halfstar";
 import FaqQuestions from "./components/faq";
+import Product from "./components/products/product";
 
 export default function Page() {
   return (
     <>
-      <div>
+      <section className="contentMargin">
         <SubHeading>Power Your Future with Solar Energy</SubHeading>
         <p className="text-grayy text-xl mb-3">
           Cut your electricity bills, increase your home’s value, and contribute to a cleaner planet with our reliable and affordable solar energy
@@ -25,7 +33,7 @@ export default function Page() {
         <Button href="">Shop Now</Button>
 
         <div id="banner" className="relative mt-10">
-          <img src="null" className="aspect-[2.187] w-full block bg-primary rounded-[20px]" alt="" />
+          <img src="null" className="aspect-[2.187] w-full block max-split:aspect-[366/510] bg-primary rounded-[20px]" alt="" />
           <div className="split:absolute -bottom-0 left-0">
             <div id="caption" className="bg-red max-split:after:hidden  pt-6 pb-8 split:pb-[18px] split:ps-5 relative max-w-[550px] bg-white">
               <h1 className="text-2xl font-bold mb-3">Our Solar products</h1>
@@ -36,9 +44,9 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="py-10 split:py-20 relative grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-split:border-t max-split:border-t-neutral-400">
+      <div className="contentMargin py-10 split:py-20 relative grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-split:border-t max-split:border-t-neutral-400">
         <span className="absolute bottom-10 left-0 z-[-1]">
           <RectangleSvg />
         </span>
@@ -76,7 +84,7 @@ export default function Page() {
         </GreenCard>
       </div>
 
-      <div className="split:flex space-y-6 items-center py-8 split:py-16">
+      <div className="contentMargin split:flex space-y-6 items-center py-8 split:py-16">
         <div className="pe-[31px] basis-[41.55%]">
           <SubHeading>About Us</SubHeading>
           Jingchangneng Group is a group company composed of Shenzhen Jingchangneng New Energy Technology Co., Ltd., Shenzhen Xingzhijie
@@ -92,59 +100,94 @@ export default function Page() {
           stations, off-grid smart energy solutions, etc. have become the company's core products; leading products in the solar industry.
         </div>
 
-        <div className="split:ps-[77px]  basis-[58.45%] relative text-white ">
+        <div className="split:ps-[77px]  basis-[58.45%] relative text-white max-split:space-y-6">
           <div className="space-y-3 split:absolute split:h-full -left-7 split:flex flex-col split:justify-around split:items-center">
             <div className="split:contents flex gap-3 split:h-full">
-              <div className="bg-[#06402DCC] py-[13px] px-[11px] max-split:flex-1">
-                <h4 className="text-6 font-bold">100 +</h4>
-                <p className="font-medium ">Years of rapid development</p>
+              <div className="bg-[#06402DCC] rounded-[4px] p-[13px] px-[11px] max-split:flex-1">
+                <h4 className="text-2xl font-bold">100 +</h4>
+                <p className="font-medium text-[16px]/[150%] ">Years of rapid development</p>
               </div>
-              <div className="bg-[#06402DCC] py-[13px] px-[11px] max-split:-1">
-                <h4 className="text-6 font-bold">
-                  8000 m<sup>2</sup> +
+              <div className="bg-[#06402DCC] rounded-[4px] p-[13px] px-[11px] max-split:flex-1">
+                <h4 className="text-2xl font-bold">
+                  8000
+                  <span className="font-normal text-[16px]">
+                    m<sup>2</sup>
+                  </span>
+                  +
                 </h4>
-                <p className="font-medium">Industrial Park</p>
+                <p className="font-medium text-[16px]/[150%]">Industrial Park</p>
               </div>
             </div>
-            <div className="bg-[#06402DCC] py-[25px] px-[11px] ">
-              <h4 className="text-6 font-bold">100 million + </h4>
-              <p className="font-medium">Annual Sales Revenue</p>
+            <div className="bg-[#06402DCC] rounded-[4px] p-[25px] px-[11px] ">
+              <h4 className="text-2xl font-bold">100 million + </h4>
+              <p className="font-medium text-[16px]/[150%]">Annual Sales Revenue</p>
             </div>
           </div>
-          <Image src={radioImage} className="object-cover w-full" alt="Jcns Electronic devices powered by solar" />
+          <Image src={radioImage} className="object-cover w-full rounded-[4px]" alt="Jcns Electronic devices powered by solar" />
         </div>
       </div>
 
-      <section className="py-20">
-        <div className="split:flex space-y-4 justify-between mb-6">
+      <section className="contentMargin py-7 split:py-20 space-y-6">
+        <div className="split:flex space-y-4 justify-between mb-6 items-center">
           <SubHeading>Our Products</SubHeading>
           <Button href="">See Our Gallery</Button>
         </div>
-        <div className="grid grid-cols-3  gap-y-[27px] gap-x-[15px]">
-          <div className="col-start-1 row-start-1 h-full py-[29px] px-[32px] border-[#E5E7EB] border-[1.35px] rounded-[21.56px]">
-            <h4 className="font-medium text-2xl py-[7px] text-center">Jolar Solar Generator</h4>
-            <Image className="mx-auto block" src={product1} alt="Jcns Power Station, with solar panels to power your electronic devices" />
+        <ProductSegmentation title="Solar Panels">
+          <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
+            <Product
+              className="col-span-1"
+              image={solar1}
+              alt="Solar Panels products one"
+              title="400W solar Panels"
+              category="Solar Powered Fans"
+              imgCln="sm:px-[55px]"
+            />
+            <Product
+              className="col-span-1"
+              image={solar2}
+              alt="Solar Panels products one"
+              title="600W Solar Panels"
+              category="Solar Powered Fans"
+              imgCln="sm:px-[55px]"
+            />
+            <Product
+              className="col-span-1"
+              image={solar3}
+              alt="Solar Panels products one"
+              title="800W Solar Panels"
+              category="Solar Powered Fans"
+              imgCln="sm:px-[55px]"
+            />
           </div>
+        </ProductSegmentation>
 
-          <div className="col-start-2 row-start-1">
-            <div className="col-start-1 row-start-1 h-full py-[29px] px-[32px] border-[#E5E7EB] border-[1.35px] rounded-[21.56px]">
-              <h4 className="font-medium text-2xl py-[7px] text-center">Vertical Parallel Battery</h4>
-              <Image className="mx-auto block" src={product2} alt="Jcns Vertiacl Parallel Battery" />
-            </div>
+        <ProductSegmentation title="Solar Powered Fans">
+          <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
+            <Product
+              className="col-span-1"
+              image={solarfan1}
+              alt="Solar Panels products one"
+              title={'16" DC/AC Solar Fan'}
+              category="Solar Powered Fans"
+            />
+            <Product
+              className="col-span-1"
+              image={solarfan2}
+              alt="Solar Panels products one"
+              title={'16" Solar Fan, 12v4AH Battery'}
+              category="Solar Powered Fans"
+            />
+            <Product
+              className="col-span-1"
+              image={solarfan3}
+              alt="Solar Panels products one"
+              title={'16" Remote Control fan, 11.1v4H Battery'}
+              category="Solar Powered Fans"
+            />
           </div>
-
-          <div className="col-start-1 col-span-2 row-start-2 flex px-8 justify-between items-center border-[#E5E7EB] border-[1.35px] rounded-[21.56px]">
-            <h4 className="font-medium text-2xl py-[7px] text-center">Jolar Home System</h4>
-            <Image src={product3} alt="Jcns Home Solar panel and battery" />
-          </div>
-
-          <div className="col-start-3 row-start-1 row-span-2 flex flex-col justify-center px-8 border-[#E5E7EB] border-[1.35px] rounded-[21.56px]">
-            <h4 className="font-medium text-2xl pb-8 text-center">Solar Speaker</h4>
-            <Image src={product4} alt="Jcns Solar powered Speaker, powered by solar panel" />
-          </div>
-        </div>
+        </ProductSegmentation>
       </section>
-      <section className="bg-primary py-[120px] space-y-10">
+      <section className="contentMargin bg-primary py-[120px] space-y-10">
         <SubHeading className="text-white">How It Works</SubHeading>
         <div className="gap-x-6 max-split:space-y-6 split:flex">
           <div className="bg-white rounded-2xl py-12 px-8 space-y-4">
@@ -193,14 +236,14 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className="py-16">
+      <section className="contentMargin py-16">
         <SubHeading>A Sneak Peak into Jcns Factory</SubHeading>
       </section>
 
-      <section className="py-16 space-y-10">
+      <section className="contentMargin py-16 space-y-10">
         <SubHeading>What our customers say about us</SubHeading>
 
-        <div className="grid grid-cols-2 gap-x-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <CustomerReview image="#">
             <div className="grow-1 space-y-4">
               <div className="text-sm">
@@ -252,7 +295,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-12">
+      <section className="contentMargin py-12">
         <FaqQuestions />
       </section>
     </>
