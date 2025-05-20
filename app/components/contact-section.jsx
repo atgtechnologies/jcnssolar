@@ -17,8 +17,19 @@ const ContactUsSection = function () {
 
   const onSubmit = async (data) => {
     setLoading(true);
-    console.log(data);
+    const result = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((d) => d.json());
 
+    if (result.success) {
+      alert("Email sent successfully");
+    } else {
+      alert("Failed to send email:", result.error);
+    }
     setLoading(false);
   };
 
