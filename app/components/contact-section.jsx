@@ -1,9 +1,27 @@
+"use client";
 import InputElement from "../components/inputElement";
 import Button from "../components/button";
 import SubHeading from "./subheading";
 import { fadeInViewport } from "./framer-constants";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
 
 const ContactUsSection = function () {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    watch,
+  } = useForm();
+  const [loading, setLoading] = useState(false);
+
+  const onSubmit = async (data) => {
+    setLoading(true);
+    console.log(data);
+
+    setLoading(false);
+  };
+
   return (
     <>
       <div className="mb-5">
@@ -23,15 +41,60 @@ const ContactUsSection = function () {
           <h3 className="text-[30px] font-bold">Contact Information</h3>
           <small>Get in touch</small>
 
-          <form action="" method="post" className="mt-10 space-y-[45px] ">
-            <InputElement label="First name" type="text" placeholder="John" />
-            <InputElement label="Last name" type="text" placeholder="Wick" />
-            <InputElement label="Email address" type="email" placeholder="johnwick@gmail.com" />
-            <InputElement label="Phone number" type="number" placeholder="08099887766" />
-            <InputElement label="Message" type="text" placeholder="Please type here" />
+          <form onSubmit={handleSubmit(onSubmit)} className="mt-10 space-y-[45px] ">
+            <InputElement
+              label="First name"
+              type="text"
+              placeholder="John"
+              value={watch("firstName") || ""}
+              {...register("firstName", { required: true, validate: (v) => v.trim() !== "" })}
+              error={errors.firstName ? "First name is required" : ""}
+            />
+            <InputElement
+              label="Last name"
+              type="text"
+              placeholder="Wick"
+              value={watch("lastName") || ""}
+              {...register("lastName", { required: true, validate: (v) => v.trim() !== "" })}
+              error={errors.lastName ? "Last name is required" : ""}
+            />
+            <InputElement
+              label="Email address"
+              type="email"
+              placeholder="johnwick@gmail.com"
+              value={watch("email") || ""}
+              {...register("email", { required: true, validate: (v) => v.trim() !== "" })}
+              error={errors.email ? "Email address is required" : ""}
+            />
+            <InputElement
+              label="Phone number"
+              type="number"
+              placeholder="08099887766"
+              value={watch("phone") || ""}
+              {...register("phone", { required: true, validate: (v) => v.trim() !== "" })}
+              error={errors.phone ? "Phone number is required" : ""}
+            />
+            <InputElement
+              label="Message"
+              type="text"
+              placeholder="Please type here"
+              value={watch("message") || ""}
+              {...register("message", { required: true, validate: (v) => v.trim() !== "" })}
+              error={errors.message ? "Message is required" : ""}
+            />
 
-            <Button className="rounded-2xl max-w-[518px] mx-auto" type="button">
-              Send a message
+            <Button className="rounded-2xl max-w-[518px] mx-auto cursor-pointer" type="submit" disabled={loading}>
+              {loading ? (
+                <span className="flex items-center justify-center gap-2">
+                  <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                  </svg>
+                  Loading...
+                </span>
+              ) : (
+                "Send a message"
+              )}
             </Button>
           </form>
           <div>
