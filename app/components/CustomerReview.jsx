@@ -1,6 +1,8 @@
-const CustomerReview = ({ children, image }) => {
+"use client";
+import { motion } from "framer-motion";
+const CustomerReview = ({ children, image, ...props }) => {
   return (
-    <div className="bg-primary col-span-1 rounded-[20px] py-[55px] px-[11px] lg:px-[69px] relative h-auto ">
+    <div {...props} className="bg-primary col-span-1 rounded-[20px] py-[55px] px-[11px] lg:px-[69px] relative h-auto ">
       <span className="absolute flex top-0 left-0 w-full h-full justify-end">
         <svg width="596" height="330" viewBox="0 0 596 330" fill="none">
           <path
@@ -191,4 +193,4 @@ const CustomerReview = ({ children, image }) => {
   );
 };
 
-export default CustomerReview;
+export default motion(CustomerReview);

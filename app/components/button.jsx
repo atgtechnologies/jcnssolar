@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
@@ -16,4 +18,4 @@ const Button = ({ children, className, href, type = "link", ...props }) => {
   );
 };
 
-export default Button;
+export default motion(Button);

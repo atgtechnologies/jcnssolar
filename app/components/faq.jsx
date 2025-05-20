@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FAQ } from "../data/faqquestions";
 import SubHeading from "./subheading";
+import { fadeInViewport } from "./framer-constants";
 
 const FaqQuestions = () => {
   const [activeFaq, setActiveFaq] = useState(null);
@@ -14,7 +15,9 @@ const FaqQuestions = () => {
 
   return (
     <div className="space-y-6">
-      <SubHeading>FAQ's</SubHeading>
+      <SubHeading {...fadeInViewport} id="faq">
+        FAQ's
+      </SubHeading>
 
       <ul className="space-y-[35px]">
         {FAQ.map((faq) => (

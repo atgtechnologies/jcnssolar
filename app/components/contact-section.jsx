@@ -1,15 +1,24 @@
 import InputElement from "../components/inputElement";
 import Button from "../components/button";
 import SubHeading from "./subheading";
+import { fadeInViewport } from "./framer-constants";
 
 const ContactUsSection = function () {
   return (
     <>
       <div className="mb-5">
-        <SubHeading>Contact Us</SubHeading>
+        <SubHeading {...fadeInViewport}>Contact Us</SubHeading>
       </div>
       <div className="max-lg:space-y-10 max-lg:max-w-[800px] mx-auto lg:flex gap-x-[52px] max-md:contents relative py-[23px]  lg:before:block lg:before:absolute before:top-0 before:left-o lg:before:bg-black before:rounded-l-[8px] before:w-[403px] before:h-full before:z-[-1]">
-        <div className="grow-1 lg:w-1/2 bg-primary lg:ms-[63px] w-full max-lg:aspect-square"></div>
+        <div className="grow-1 lg:w-1/2 lg:ms-[63px] w-full max-lg:aspect-square">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.184441462245!2d3.159348264995647!3d6.459186914640068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b86ec135d7297%3A0xf3dfa0e90cc163df!2sAlabastore!5e0!3m2!1sen!2sng!4v1747683094301!5m2!1sen!2sng"
+            className="w-full h-full border-none"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
         <div className="lg:w-1/2 lg:max-w-[518px] w-full">
           <h3 className="text-[30px] font-bold">Contact Information</h3>
           <small>Get in touch</small>
@@ -54,8 +63,10 @@ const ContactUsSection = function () {
                   fill="#000033"
                 />
               </svg>
-
-              <p>Shenzhen Meitongfu Industrial Security Intelligent Industrial Park, Guangming New District, Shenzhen, Guangdong</p>
+              <p>
+                C33.38 century mall, ojo lagos. <br /> Block 17 shop 11-13 Civic center Market, Kano
+              </p>
+              {/* <p>Shenzhen Meitongfu Industrial Security Intelligent Industrial Park, Guangming New District, Shenzhen, Guangdong</p> */}
             </div>
           </div>
         </div>

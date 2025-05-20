@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 const GreenCard = ({ children, label, ...props }) => {
   return (
     <div {...props}>
@@ -7,4 +10,4 @@ const GreenCard = ({ children, label, ...props }) => {
   );
 };
 
-export default GreenCard;
+export default motion(GreenCard);

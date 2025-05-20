@@ -21,7 +21,7 @@ body {
   font-weight: 400;
 }
 
-#caption::after {
+/* #caption::after {
   content: "";
   position: absolute;
   top: 0;
@@ -32,10 +32,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
+} */
 
 .contentMargin {
   padding-inline: 64px;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 880px) {

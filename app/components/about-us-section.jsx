@@ -1,12 +1,22 @@
 import Image from "next/image";
 import SubHeading from "../components/subheading";
 import radioImage from "../components/images/radio.png";
+import * as motion from "framer-motion/client";
+import AboutFloater from "./about-floater";
+import { AnimateToLeft, StaggerParent } from "./framer-constants";
 
 const AboutUsSection = () => {
   return (
     <section className="contentMargin split:flex space-y-6 items-center py-8 split:py-16">
       <div className="pe-[31px] basis-[41.55%]">
-        <SubHeading>About Us</SubHeading>
+        <SubHeading
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+          viewport={{ once: true, amount: 0.8 }}
+        >
+          About Us
+        </SubHeading>
         Jingchangneng Group is a group company composed of Shenzhen Jingchangneng New Energy Technology Co., Ltd., Shenzhen Xingzhijie Optoelectronics
         Co., Ltd., Jiangxi Jingchangneng Technology Co., Ltd., and Jiangxi Jingjinneng Technology Co., Ltd.
         <br />
@@ -20,31 +30,32 @@ const AboutUsSection = () => {
         stations, off-grid smart energy solutions, etc. have become the company's core products; leading products in the solar industry.
       </div>
 
-      <div className="split:ps-[77px]  basis-[58.45%] relative text-white max-split:space-y-6">
+      <motion.div
+        variants={StaggerParent()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.9 }}
+        className="split:ps-[77px]  basis-[58.45%] relative text-white max-split:space-y-6"
+      >
         <div className="space-y-3 split:absolute split:h-full -left-7 split:flex flex-col split:justify-around split:items-center">
           <div className="split:contents flex gap-3 split:h-full">
-            <div className="bg-[#06402DCC] rounded-[4px] p-[13px] px-[11px] max-split:flex-1">
-              <h4 className="text-2xl font-bold">100 +</h4>
-              <p className="font-medium text-[16px]/[150%] ">Years of rapid development</p>
-            </div>
-            <div className="bg-[#06402DCC] rounded-[4px] p-[13px] px-[11px] max-split:flex-1">
-              <h4 className="text-2xl font-bold">
-                8000
-                <span className="font-normal text-[16px]">
-                  m<sup>2</sup>
-                </span>
-                +
-              </h4>
-              <p className="font-medium text-[16px]/[150%]">Industrial Park</p>
-            </div>
+            <AboutFloater variants={AnimateToLeft} sub="Years of rapid development" className=" max-split:flex-1">
+              100 +
+            </AboutFloater>
+            <AboutFloater variants={AnimateToLeft} sub="Industrial Park" className=" max-split:flex-1">
+              8000
+              <span className="font-normal text-[16px]">
+                m<sup>2</sup>
+              </span>
+              +
+            </AboutFloater>
           </div>
-          <div className="bg-[#06402DCC] rounded-[4px] p-[25px] px-[11px] ">
-            <h4 className="text-2xl font-bold">100 million + </h4>
-            <p className="font-medium text-[16px]/[150%]">Annual Sales Revenue</p>
-          </div>
+          <AboutFloater variants={AnimateToLeft} sub="Annual Sales Revenue" className="p-[25px] px-[11px]">
+            100 million +
+          </AboutFloater>
         </div>
         <Image src={radioImage} className="object-cover w-full rounded-[4px]" alt="Jcns Electronic devices powered by solar" />
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -25,17 +25,28 @@ import inverter3 from "@/app/components/images/Inverter 3.png";
 import inverter4 from "@/app/components/images/Inverter 4.png";
 import inverter5 from "@/app/components/images/Inverter 5.png";
 import inverter6 from "@/app/components/images/inverter 6.png";
+import generator1 from "@/app/components/images/300w-generator.jpg";
+import generator2 from "@/app/components/images/500w-generator.jpg";
 import SubHeading from "../components/subheading";
+import { cardVariants, StaggerParent } from "../components/framer-constants";
 
 const Products = () => {
   return (
     <div className="space-y-8 contentMargin">
       <SubHeading>Our Product Gallery</SubHeading>
 
-      <ProductSegmentation title="Solar Panels">
-        <div className="flex flex-wrap gap-4">
+      <ProductSegmentation
+        id="panels"
+        variants={StaggerParent()}
+        whileInView={"show"}
+        initial={"hidden"}
+        viewport={{ once: true, amount: 0.6 }}
+        title="Solar Panels"
+      >
+        <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
           <Product
-            className=""
+            variants={cardVariants}
+            className="col-span-1"
             image={solar1}
             alt="Solar Panels products one"
             title="400W solar Panels"
@@ -43,7 +54,8 @@ const Products = () => {
             imgCln="sm:px-[55px]"
           />
           <Product
-            className=""
+            variants={cardVariants}
+            className="col-span-1"
             image={solar2}
             alt="Solar Panels products one"
             title="600W Solar Panels"
@@ -51,7 +63,8 @@ const Products = () => {
             imgCln="sm:px-[55px]"
           />
           <Product
-            className=""
+            variants={cardVariants}
+            className="col-span-1"
             image={solar3}
             alt="Solar Panels products one"
             title="800W Solar Panels"
@@ -61,38 +74,50 @@ const Products = () => {
         </div>
       </ProductSegmentation>
 
-      <ProductSegmentation title="Solar Powered Fans">
-        <div className="flex flex-wrap gap-4">
+      <ProductSegmentation
+        id="fans"
+        variants={StaggerParent()}
+        whileInView={"show"}
+        initial={"hidden"}
+        viewport={{ once: true, amount: 0.6 }}
+        title="Solar Powered Fans"
+      >
+        <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={solarfan1}
             alt="Solar Panels products one"
             title={'16" DC/AC Solar Fan'}
             category="Solar Powered Fans"
           />
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={solarfan2}
             alt="Solar Panels products one"
             title={'16" Solar Fan, 12v4AH Battery'}
             category="Solar Powered Fans"
           />
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={solarfan3}
             alt="Solar Panels products one"
             title={'16" Remote Control fan, 11.1v4H Battery'}
             category="Solar Powered Fans"
           />
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={solarfan4}
             alt="Solar Panels products one"
             title={'12" Solar fan, 9v4AH'}
             category="Solar Powered Fans"
           />
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={solarfan5}
             alt="Solar Panels products one"
             title={'18"Solar fan, 12.1v4AH'}
@@ -101,32 +126,49 @@ const Products = () => {
         </div>
       </ProductSegmentation>
 
-      <ProductSegmentation title="Solar Powered Home Lighting Systems">
-        <div className="flex flex-wrap gap-4">
-          <Product className="basis-auto" image={lighting1} alt="Solar Panels products one" title="Speaker System" category="Home Lighting Systems" />
+      <ProductSegmentation
+        variants={StaggerParent()}
+        whileInView={"show"}
+        initial={"hidden"}
+        viewport={{ once: true, amount: 0.6 }}
+        title="Solar Powered Home Lighting Systems"
+      >
+        <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
+            image={lighting1}
+            alt="Solar Panels products one"
+            title="Speaker System"
+            category="Home Lighting Systems"
+          />
+          <Product
+            variants={cardVariants}
+            className="col-span-1"
             image={lighting2}
             alt="Solar Panels products one"
             title="Solar Home System"
             category="Home Lighting Systems"
           />
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={lighting3}
             alt="Solar Panels products one"
             title="Lighting Speaker MP3/FM"
             category="Home Lighting Systems"
           />
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={lighting4}
             alt="Solar Panels products one"
             title="Lighting Speaker MP3/FM"
             category="Home Lighting Systems"
           />
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={lighting5}
             alt="Solar Panels products one"
             title="Lighting Speaker MP3/FM"
@@ -135,39 +177,58 @@ const Products = () => {
         </div>
       </ProductSegmentation>
 
-      <ProductSegmentation title="Solar Energy Storage Systems">
-        <div className="flex flex-wrap gap-4">
+      <ProductSegmentation
+        id="storage"
+        variants={StaggerParent()}
+        whileInView={"show"}
+        initial={"hidden"}
+        viewport={{ once: true, amount: 0.6 }}
+        title="Solar Energy Storage Systems"
+      >
+        <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={energy1}
             alt="Solar Panels products one"
             title="15Kwh po4 Battery "
             category="Energy Storage System"
           />
-          <Product className="basis-auto" image={energy2} alt="Solar Panels products one" title="Solar Inverter" category="Energy Storage System" />
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
+            image={energy2}
+            alt="Solar Panels products one"
+            title="Solar Inverter"
+            category="Energy Storage System"
+          />
+          <Product
+            variants={cardVariants}
+            className="col-span-1"
             image={energy3}
             alt="Solar Panels products one"
             title="15Kwh po4 Battery "
             category="Energy Storage System"
           />
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={energy4}
             alt="Solar Panels products one"
             title="Stackable 15Kwh Battery "
             category="Energy Storage System"
           />
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={energy5}
             alt="Solar Panels products one"
             title="Stackable 15Kwh Battery "
             category="Energy Storage System"
           />
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={energy6}
             alt="Solar Panels products one"
             title="Solar Storage Battery"
@@ -176,49 +237,98 @@ const Products = () => {
         </div>
       </ProductSegmentation>
 
-      <ProductSegmentation title="Small Inverter Series">
-        <div className="flex flex-wrap gap-4">
+      <ProductSegmentation
+        variants={StaggerParent()}
+        whileInView={"show"}
+        initial={"hidden"}
+        viewport={{ once: true, amount: 0.6 }}
+        title="Small Inverter Series"
+        id="inverters"
+      >
+        <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={inverter1}
             alt="Solar Panels products one"
             title="12-48v/2000w Inverter"
             category="Small Inverter Series"
           />
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={inverter2}
             alt="Solar Panels products one"
             title="12v/500-2000w Inverter"
             category="Small Inverter Series"
           />
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={inverter3}
             alt="Solar Panels products one"
             title="800w, 1300w and 1800w Inverter"
             category="Small Inverter Series"
           />
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={inverter4}
             alt="Solar Panels products one"
             title="12v/500w Inverter"
             category="Small Inverter Series"
           />
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={inverter5}
             alt="Solar Panels products one"
             title="500w-2000w Inverter"
             category="Small Inverter Series"
           />
           <Product
-            className="basis-auto"
+            variants={cardVariants}
+            className="col-span-1"
             image={inverter6}
             alt="Solar Panels products one"
             title="500w-2000w Inverter"
             category="Small Inverter Series"
+          />
+        </div>
+      </ProductSegmentation>
+
+      <ProductSegmentation
+        variants={StaggerParent()}
+        whileInView={"show"}
+        initial={"hidden"}
+        viewport={{ once: true, amount: 0.6 }}
+        title="Solar Generators"
+        id="generators"
+      >
+        <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
+          {/* <Product
+            variants={cardVariants}
+            className="col-span-1"
+            image={generator}
+            alt="Solar Panels products one"
+            title="12-48v/2000w Inverter"
+            category="Solar Genrators"
+          /> */}
+          <Product
+            variants={cardVariants}
+            className="col-span-1"
+            image={generator1}
+            alt="Solar Panels products one"
+            title="12-48v/2000w Inverter"
+            category="Solar Genrators"
+          />
+          <Product
+            variants={cardVariants}
+            className="col-span-1"
+            image={generator2}
+            alt="Solar Panels products one"
+            title="12-48v/2000w Inverter"
+            category="Solar Genrators"
           />
         </div>
       </ProductSegmentation>

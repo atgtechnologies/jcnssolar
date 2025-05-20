@@ -23,8 +23,16 @@ const Navbar = () => {
             (open ? "max-split:translate-x-0 max-split:left-0" : "max-split:translate-x-full")
           }
         >
-          <li className="py-2 flex justify-end split:hidden max-split:mb-10" onClick={() => setOpen(false)}>
-            close
+          <li className="p-2 flex justify-end split:hidden max-split:mb-5" onClick={() => setOpen(false)}>
+            <svg className="w-12" viewBox="0 0 24 24" fill="none">
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+              <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <rect width="24" height="24" fill="white"></rect>
+                <path d="M7 17L16.8995 7.10051" stroke="#000000" strokeLinecap="round" strokeLinejoin="round"></path>
+                <path d="M7 7.00001L16.8995 16.8995" stroke="#000000" strokeLinecap="round" strokeLinejoin="round"></path>
+              </g>
+            </svg>
           </li>
           <NavLink href="/" active={pathname == "/" || pathname == ""}>
             Home
