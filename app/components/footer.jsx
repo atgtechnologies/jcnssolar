@@ -23,40 +23,62 @@ const Footer = () => {
             <ul className="text-sm space-y-3 md:space-y-6">
               <li className="text-[18px] font-bold">Quick Links</li>
               <li>
-                <Link href="/">Home</Link>
+                <Link className="hover:underline" href="/">
+                  Home
+                </Link>
               </li>
               <li>
-                <Link href="/about">About Us</Link>
+                <Link className="hover:underline" href="/about">
+                  About Us
+                </Link>
               </li>
               <li>
-                <Link href="/products">Shop Products</Link>
+                <Link className="hover:underline" href="/products">
+                  Shop Products
+                </Link>
               </li>
               <li>
-                <Link href="/#hiw">How it Works</Link>
+                <Link className="hover:underline" href="/#hiw">
+                  How it Works
+                </Link>
               </li>
               <li>
-                <Link href="/contact">Contact Us</Link>
+                <Link className="hover:underline" href="/contact">
+                  Contact Us
+                </Link>
               </li>
               <li>
-                <Link href="/#faq">FAQ's</Link>
+                <Link className="hover:underline" href="/#faq">
+                  FAQ's
+                </Link>
               </li>
             </ul>
             <ul className="text-sm space-y-3 md:space-y-6">
               <li className="text-[18px] font-bold">Products</li>
               <li>
-                <a href="/products#panels">Solar Panels </a>
+                <Link className="hover:underline" href="/products#panels">
+                  Solar Panels
+                </Link>
               </li>
               <li>
-                <a href="/products#fans">Solar Powered Fans</a>
+                <Link className="hover:underline" href="/products#fans">
+                  Solar Powered Fans
+                </Link>
               </li>
               <li>
-                <a href="/products#storage">Energy Storage Systems</a>
+                <Link className="hover:underline" href="/products#storage">
+                  Energy Storage Systems
+                </Link>
               </li>
               <li>
-                <a href="/products#inverters">Solar Inverters</a>
+                <Link className="hover:underline" href="/products#inverters">
+                  Solar Inverters
+                </Link>
               </li>
               <li>
-                <a href="/products#generators">Solar Generators & Systems</a>
+                <Link className="hover:underline" href="/products#generators">
+                  Solar Generators & Systems
+                </Link>
               </li>
             </ul>
           </div>

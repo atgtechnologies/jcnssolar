@@ -8,6 +8,12 @@ import estate from "@/app/components/images/jcnsestate.png";
 import * as motion from "framer-motion/client";
 import { AnimateToLeft, AnimateToLeftWithDelay, AnimateToRight, fadeInViewport } from "../components/framer-constants";
 
+export const metadata = {
+  title: "About JCNS Solar Solutions Nigeria | Trusted Solar Experts & Installers",
+  description:
+    "Learn about JCNS Solar Solutions, Nigeria's trusted solar energy company. Discover our mission, team, and commitment to delivering top-quality solar products and installations nationwide.",
+};
+
 const About = () => {
   return (
     <>

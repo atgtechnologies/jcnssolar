@@ -21,6 +21,7 @@ import AboutUsSection from "./components/about-us-section";
 import ContactUsSection from "./components/contact-section";
 import { StaggerParent, AnimateToRight, containerVariants, cardVariants, AnimateToLeft, fadeInViewport, shake } from "./components/framer-constants";
 import * as motion from "framer-motion/client";
+import FactoryVideo from "./components/FactoryVideo";
 
 export default function Page() {
   return (
@@ -126,7 +127,6 @@ export default function Page() {
               variants={cardVariants}
               className="col-span-1"
               image={solar1}
-              alt="Solar Panels products one"
               title="400W solar Panels"
               category="Solar Powered Fans"
               imgCln="sm:px-[55px]"
@@ -135,7 +135,6 @@ export default function Page() {
               className="col-span-1"
               variants={cardVariants}
               image={solar2}
-              alt="Solar Panels products one"
               title="600W Solar Panels"
               category="Solar Powered Fans"
               imgCln="sm:px-[55px]"
@@ -144,7 +143,6 @@ export default function Page() {
               className="col-span-1"
               variants={cardVariants}
               image={solar3}
-              alt="Solar Panels products one"
               title="800W Solar Panels"
               category="Solar Powered Fans"
               imgCln="sm:px-[55px]"
@@ -160,19 +158,11 @@ export default function Page() {
           viewport={{ once: true, amount: 0.6 }}
         >
           <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
-            <Product
-              className="col-span-1"
-              variants={cardVariants}
-              image={solarfan1}
-              alt="Solar Panels products one"
-              title={'16" DC/AC Solar Fan'}
-              category="Solar Powered Fans"
-            />
+            <Product className="col-span-1" variants={cardVariants} image={solarfan1} title={'16" DC/AC Solar Fan'} category="Solar Powered Fans" />
             <Product
               className="col-span-1"
               variants={cardVariants}
               image={solarfan2}
-              alt="Solar Panels products one"
               title={'16" Solar Fan, 12v4AH Battery'}
               category="Solar Powered Fans"
             />
@@ -180,7 +170,6 @@ export default function Page() {
               className="col-span-1"
               variants={cardVariants}
               image={solarfan3}
-              alt="Solar Panels products one"
               title={'16" Remote Control fan, 11.1v4H Battery'}
               category="Solar Powered Fans"
             />
@@ -245,7 +234,9 @@ export default function Page() {
         </motion.div>
       </section>
       <section className="contentMargin py-16">
-        <SubHeading {...fadeInViewport}>A Sneak Peak into Jcns Factory</SubHeading>
+        <SubHeading {...fadeInViewport}>A Sneak Peak into Our tory</SubHeading>
+
+        <FactoryVideo />
       </section>
 
       <section className="contentMargin py-16 space-y-10">
@@ -258,7 +249,7 @@ export default function Page() {
           viewport={{ once: true, amount: 0.6 }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-6"
         >
-          <CustomerReview image="#" variants={AnimateToRight}>
+          <CustomerReview image="./images/david.png" variants={AnimateToRight}>
             <div className="grow-1 space-y-4 text-white">
               <div className="text-sm">
                 <h5 className="font-bold">David Tunde</h5>
@@ -281,7 +272,7 @@ export default function Page() {
               </div>
             </div>
           </CustomerReview>
-          <CustomerReview image="#" variants={AnimateToLeft}>
+          <CustomerReview image="./images/amaka.png" variants={AnimateToLeft}>
             <div className="grow-1 space-y-4">
               <div className="text-sm text-white">
                 <h5 className="font-bold">Amaka Okon</h5>

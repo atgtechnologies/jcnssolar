@@ -183,9 +183,9 @@ const CustomerReview = ({ children, image, ...props }) => {
       </span>
 
       <div className="space-y-8 split:flex gap-x-8 w-full">
-        <div className="relative shrink-0 ">
+        <div className="relative shrink-0 max-split:w-fit split:self-start">
           <img src={image} alt="" className="block w-[174px] h-[187px] rounded-bl-[50px] rounded-tl-[50px] rounded-br-[50px]" />
-          <span className="block absolute top-[5px] left-0 w-[186px] h-[199px] border-2 border-[#D3FDE8] rounded-bl-[50px] rounded-tl-[50px] rounded-br-[50px]"></span>
+          <span className="block absolute top-0 left-0 h-full w-full border-2 border-[#D3FDE8] rounded-bl-[50px] rounded-tl-[50px] rounded-br-[50px]"></span>
         </div>
         {children}
       </div>

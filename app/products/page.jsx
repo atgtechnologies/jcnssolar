@@ -30,6 +30,12 @@ import generator2 from "@/app/components/images/500w-generator.jpg";
 import SubHeading from "../components/subheading";
 import { cardVariants, StaggerParent } from "../components/framer-constants";
 
+export const metadata = {
+  title: "Solar Products in Nigeria | Buy Inverters, Panels & Kits - JCNS Solar Solutions",
+  description:
+    "Explore our wide range of solar products in Nigeria: inverters, solar panels, batteries, and complete solar kits for homes and businesses. Quality, affordable, and reliable solar solutions from JCNS Solar Solutions.",
+};
+
 const Products = () => {
   return (
     <div className="space-y-8 contentMargin">
@@ -48,7 +54,6 @@ const Products = () => {
             variants={cardVariants}
             className="col-span-1"
             image={solar1}
-            alt="Solar Panels products one"
             title="400W solar Panels"
             category="Solar Powered Fans"
             imgCln="sm:px-[55px]"
@@ -57,7 +62,6 @@ const Products = () => {
             variants={cardVariants}
             className="col-span-1"
             image={solar2}
-            alt="Solar Panels products one"
             title="600W Solar Panels"
             category="Solar Powered Fans"
             imgCln="sm:px-[55px]"
@@ -66,7 +70,6 @@ const Products = () => {
             variants={cardVariants}
             className="col-span-1"
             image={solar3}
-            alt="Solar Panels products one"
             title="800W Solar Panels"
             category="Solar Powered Fans"
             imgCln="sm:px-[55px]"
@@ -83,19 +86,11 @@ const Products = () => {
         title="Solar Powered Fans"
       >
         <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={solarfan1}
-            alt="Solar Panels products one"
-            title={'16" DC/AC Solar Fan'}
-            category="Solar Powered Fans"
-          />
+          <Product variants={cardVariants} className="col-span-1" image={solarfan1} title={'16" DC/AC Solar Fan'} category="Solar Powered Fans" />
           <Product
             variants={cardVariants}
             className="col-span-1"
             image={solarfan2}
-            alt="Solar Panels products one"
             title={'16" Solar Fan, 12v4AH Battery'}
             category="Solar Powered Fans"
           />
@@ -103,26 +98,11 @@ const Products = () => {
             variants={cardVariants}
             className="col-span-1"
             image={solarfan3}
-            alt="Solar Panels products one"
             title={'16" Remote Control fan, 11.1v4H Battery'}
             category="Solar Powered Fans"
           />
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={solarfan4}
-            alt="Solar Panels products one"
-            title={'12" Solar fan, 9v4AH'}
-            category="Solar Powered Fans"
-          />
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={solarfan5}
-            alt="Solar Panels products one"
-            title={'18"Solar fan, 12.1v4AH'}
-            category="Solar Powered Fans"
-          />
+          <Product variants={cardVariants} className="col-span-1" image={solarfan4} title={'12" Solar fan, 9v4AH'} category="Solar Powered Fans" />
+          <Product variants={cardVariants} className="col-span-1" image={solarfan5} title={'18"Solar fan, 12.1v4AH'} category="Solar Powered Fans" />
         </div>
       </ProductSegmentation>
 
@@ -134,27 +114,12 @@ const Products = () => {
         title="Solar Powered Home Lighting Systems"
       >
         <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={lighting1}
-            alt="Solar Panels products one"
-            title="Speaker System"
-            category="Home Lighting Systems"
-          />
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={lighting2}
-            alt="Solar Panels products one"
-            title="Solar Home System"
-            category="Home Lighting Systems"
-          />
+          <Product variants={cardVariants} className="col-span-1" image={lighting1} title="Speaker System" category="Home Lighting Systems" />
+          <Product variants={cardVariants} className="col-span-1" image={lighting2} title="Solar Home System" category="Home Lighting Systems" />
           <Product
             variants={cardVariants}
             className="col-span-1"
             image={lighting3}
-            alt="Solar Panels products one"
             title="Lighting Speaker MP3/FM"
             category="Home Lighting Systems"
           />
@@ -162,7 +127,6 @@ const Products = () => {
             variants={cardVariants}
             className="col-span-1"
             image={lighting4}
-            alt="Solar Panels products one"
             title="Lighting Speaker MP3/FM"
             category="Home Lighting Systems"
           />
@@ -170,7 +134,6 @@ const Products = () => {
             variants={cardVariants}
             className="col-span-1"
             image={lighting5}
-            alt="Solar Panels products one"
             title="Lighting Speaker MP3/FM"
             category="Home Lighting Systems"
           />
@@ -186,54 +149,12 @@ const Products = () => {
         title="Solar Energy Storage Systems"
       >
         <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={energy1}
-            alt="Solar Panels products one"
-            title="15Kwh po4 Battery "
-            category="Energy Storage System"
-          />
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={energy2}
-            alt="Solar Panels products one"
-            title="Solar Inverter"
-            category="Energy Storage System"
-          />
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={energy3}
-            alt="Solar Panels products one"
-            title="15Kwh po4 Battery "
-            category="Energy Storage System"
-          />
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={energy4}
-            alt="Solar Panels products one"
-            title="Stackable 15Kwh Battery "
-            category="Energy Storage System"
-          />
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={energy5}
-            alt="Solar Panels products one"
-            title="Stackable 15Kwh Battery "
-            category="Energy Storage System"
-          />
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={energy6}
-            alt="Solar Panels products one"
-            title="Solar Storage Battery"
-            category="Energy Storage System"
-          />
+          <Product variants={cardVariants} className="col-span-1" image={energy1} title="15Kwh po4 Battery " category="Energy Storage System" />
+          <Product variants={cardVariants} className="col-span-1" image={energy2} title="Solar Inverter" category="Energy Storage System" />
+          <Product variants={cardVariants} className="col-span-1" image={energy3} title="15Kwh po4 Battery " category="Energy Storage System" />
+          <Product variants={cardVariants} className="col-span-1" image={energy4} title="Stackable 15Kwh Battery " category="Energy Storage System" />
+          <Product variants={cardVariants} className="col-span-1" image={energy5} title="Stackable 15Kwh Battery " category="Energy Storage System" />
+          <Product variants={cardVariants} className="col-span-1" image={energy6} title="Solar Storage Battery" category="Energy Storage System" />
         </div>
       </ProductSegmentation>
 
@@ -246,54 +167,18 @@ const Products = () => {
         id="inverters"
       >
         <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={inverter1}
-            alt="Solar Panels products one"
-            title="12-48v/2000w Inverter"
-            category="Small Inverter Series"
-          />
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={inverter2}
-            alt="Solar Panels products one"
-            title="12v/500-2000w Inverter"
-            category="Small Inverter Series"
-          />
+          <Product variants={cardVariants} className="col-span-1" image={inverter1} title="12-48v/2000w Inverter" category="Small Inverter Series" />
+          <Product variants={cardVariants} className="col-span-1" image={inverter2} title="12v/500-2000w Inverter" category="Small Inverter Series" />
           <Product
             variants={cardVariants}
             className="col-span-1"
             image={inverter3}
-            alt="Solar Panels products one"
             title="800w, 1300w and 1800w Inverter"
             category="Small Inverter Series"
           />
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={inverter4}
-            alt="Solar Panels products one"
-            title="12v/500w Inverter"
-            category="Small Inverter Series"
-          />
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={inverter5}
-            alt="Solar Panels products one"
-            title="500w-2000w Inverter"
-            category="Small Inverter Series"
-          />
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={inverter6}
-            alt="Solar Panels products one"
-            title="500w-2000w Inverter"
-            category="Small Inverter Series"
-          />
+          <Product variants={cardVariants} className="col-span-1" image={inverter4} title="12v/500w Inverter" category="Small Inverter Series" />
+          <Product variants={cardVariants} className="col-span-1" image={inverter5} title="500w-2000w Inverter" category="Small Inverter Series" />
+          <Product variants={cardVariants} className="col-span-1" image={inverter6} title="500w-2000w Inverter" category="Small Inverter Series" />
         </div>
       </ProductSegmentation>
 
@@ -310,26 +195,11 @@ const Products = () => {
             variants={cardVariants}
             className="col-span-1"
             image={generator}
-            alt="Solar Panels products one"
             title="12-48v/2000w Inverter"
             category="Solar Genrators"
           /> */}
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={generator1}
-            alt="Solar Panels products one"
-            title="12-48v/2000w Inverter"
-            category="Solar Genrators"
-          />
-          <Product
-            variants={cardVariants}
-            className="col-span-1"
-            image={generator2}
-            alt="Solar Panels products one"
-            title="12-48v/2000w Inverter"
-            category="Solar Genrators"
-          />
+          <Product variants={cardVariants} className="col-span-1" image={generator1} title="12-48v/2000w Inverter" category="Solar Genrators" />
+          <Product variants={cardVariants} className="col-span-1" image={generator2} title="12-48v/2000w Inverter" category="Solar Genrators" />
         </div>
       </ProductSegmentation>
     </div>

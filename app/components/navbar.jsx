@@ -11,6 +11,7 @@ const Navbar = () => {
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "auto";
   }, [open]);
+
   return (
     <nav className="py-4 overflow-hidden">
       <div className="flex justify-between border-b-[#EFF0F3] border-b contentMargin max-split:max-w-full max-split:w-full">

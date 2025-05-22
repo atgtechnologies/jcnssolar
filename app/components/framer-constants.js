@@ -62,7 +62,7 @@ export const shake = {
   whileInView: {
     x: [0, -6, 6, -4, 4, -2, 2, 0],
   },
-  Initial: { x: 0 },
+  initial: { x: 0 },
   transition: {
     duration: 0.6,
     ease: [0.36, 0.07, 0.19, 0.97], // custom bezier for bounce-like feel
