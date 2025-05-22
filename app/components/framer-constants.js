@@ -85,3 +85,12 @@ export const floatAnimation = {
     },
   },
 };
+
+export const fadeInViewportFxn = function (delay) {
+  return {
+    initial: { opacity: 0, y: 50 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.6, ease: "easeOut", delay },
+    viewport: { once: true, amount: 0.5 },
+  };
+};

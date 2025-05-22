@@ -19,7 +19,16 @@ import FaqQuestions from "./components/faq";
 import Product from "./components/products/product";
 import AboutUsSection from "./components/about-us-section";
 import ContactUsSection from "./components/contact-section";
-import { StaggerParent, AnimateToRight, containerVariants, cardVariants, AnimateToLeft, fadeInViewport, shake } from "./components/framer-constants";
+import {
+  StaggerParent,
+  AnimateToRight,
+  containerVariants,
+  cardVariants,
+  AnimateToLeft,
+  fadeInViewport,
+  shake,
+  fadeInViewportFxn,
+} from "./components/framer-constants";
 import * as motion from "framer-motion/client";
 import FactoryVideo from "./components/FactoryVideo";
 
@@ -115,16 +124,10 @@ export default function Page() {
           <SubHeading>Our Products</SubHeading>
           <Button href="/products">See Our Gallery</Button>
         </div>
-        <ProductSegmentation
-          title="Solar Panels"
-          variants={StaggerParent()}
-          whileInView={"show"}
-          initial={"hidden"}
-          viewport={{ once: true, amount: 0.6 }}
-        >
+        <ProductSegmentation title="Solar Panels">
           <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
             <Product
-              variants={cardVariants}
+              {...fadeInViewportFxn(0)}
               className="col-span-1"
               image={solar1}
               title="400W solar Panels"
@@ -133,7 +136,7 @@ export default function Page() {
             />
             <Product
               className="col-span-1"
-              variants={cardVariants}
+              {...fadeInViewportFxn(0.2)}
               image={solar2}
               title="600W Solar Panels"
               category="Solar Powered Fans"
@@ -141,7 +144,7 @@ export default function Page() {
             />
             <Product
               className="col-span-1"
-              variants={cardVariants}
+              {...fadeInViewportFxn(0.4)}
               image={solar3}
               title="800W Solar Panels"
               category="Solar Powered Fans"
@@ -150,25 +153,19 @@ export default function Page() {
           </div>
         </ProductSegmentation>
 
-        <ProductSegmentation
-          title="Solar Powered Fans"
-          variants={StaggerParent()}
-          whileInView={"show"}
-          initial={"hidden"}
-          viewport={{ once: true, amount: 0.6 }}
-        >
+        <ProductSegmentation title="Solar Powered Fans">
           <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
-            <Product className="col-span-1" variants={cardVariants} image={solarfan1} title={'16" DC/AC Solar Fan'} category="Solar Powered Fans" />
+            <Product className="col-span-1" {...fadeInViewportFxn(0)} image={solarfan1} title={'16" DC/AC Solar Fan'} category="Solar Powered Fans" />
             <Product
               className="col-span-1"
-              variants={cardVariants}
+              {...fadeInViewportFxn(0.2)}
               image={solarfan2}
               title={'16" Solar Fan, 12v4AH Battery'}
               category="Solar Powered Fans"
             />
             <Product
               className="col-span-1"
-              variants={cardVariants}
+              {...fadeInViewportFxn(0.4)}
               image={solarfan3}
               title={'16" Remote Control fan, 11.1v4H Battery'}
               category="Solar Powered Fans"
