@@ -12,6 +12,13 @@ const Navbar = () => {
     document.body.style.overflow = open ? "hidden" : "auto";
   }, [open]);
 
+  useEffect(
+    function () {
+      setOpen(false);
+    },
+    [pathname]
+  );
+
   return (
     <nav className="py-4 overflow-hidden">
       <div className="flex justify-between border-b-[#EFF0F3] border-b contentMargin max-split:max-w-full max-split:w-full">
@@ -24,7 +31,7 @@ const Navbar = () => {
             (open ? "max-split:translate-x-0 max-split:left-0" : "max-split:translate-x-full")
           }
         >
-          <li className="p-2 flex justify-end split:hidden max-split:mb-5" onClick={() => setOpen(false)}>
+          <li className="p-2 flex justify-end cursor-pointer split:hidden max-split:mb-5" onClick={() => setOpen(false)}>
             <svg className="w-12" viewBox="0 0 24 24" fill="none">
               <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>

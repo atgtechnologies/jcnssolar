@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FAQ } from "../data/faqquestions";
 import SubHeading from "./subheading";
 import { fadeInViewport } from "./framer-constants";
+import RectangleSvg from "./svg/rectanglepatterns";
 
 const FaqQuestions = () => {
   const [activeFaq, setActiveFaq] = useState(null);
@@ -19,7 +20,10 @@ const FaqQuestions = () => {
         FAQ's
       </SubHeading>
 
-      <ul className="space-y-[35px]">
+      <ul className="space-y-[35px] relative">
+        <span className="absolute bottom-0 right-[-120px] split:right-[-150px] z-[-1] rotate-90 ">
+          <RectangleSvg />
+        </span>
         {FAQ.map((faq) => (
           <li key={faq.id}>
             <button

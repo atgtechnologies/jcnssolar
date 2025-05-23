@@ -36,14 +36,15 @@ export default function Page() {
   return (
     <>
       <section className="contentMargin">
-        <SubHeading initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }}>
+        <SubHeading className="relative " initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }}>
           Power Your Future with Solar Energy
+          <RectangleSvg className="absolute top-[100px] right-[-110px] split:right-[-140px] z-[-1] rotate-90" />
         </SubHeading>
         <p className="text-grayy text-xl mb-3">
           Cut your electricity bills, increase your home’s value, and contribute to a cleaner planet with our reliable and affordable solar energy
           solutions.
         </p>
-        <Button {...shake} href="">
+        <Button {...shake} href="/products">
           Shop Now
         </Button>
 
@@ -80,9 +81,7 @@ export default function Page() {
         viewport={{ once: true, amount: 0.2 }}
         className="contentMargin py-10 split:py-20 relative grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 max-split:border-t max-split:border-t-neutral-400"
       >
-        <span className="absolute bottom-10 left-0 z-[-1]">
-          <RectangleSvg />
-        </span>
+        <RectangleSvg className="absolute bottom-10 left-0 z-[-1]" />
         <GreenCard variants={cardVariants} className="bg-primary py-8 px-6 rounded-2xl" label={"Solar power generation system"}>
           <svg className="w-[25px] split:w-10" viewBox="0 0 40 40" fill="none">
             <path
@@ -125,7 +124,8 @@ export default function Page() {
           <Button href="/products">See Our Gallery</Button>
         </div>
         <ProductSegmentation title="Solar Panels">
-          <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 split:grid-cols-3 gap-6 relative ">
+            <RectangleSvg className="absolute top-[-20px] right-[-100px] lg:right-[-140px] z-[-1] rotate-90" />
             <Product
               {...fadeInViewportFxn(0)}
               className="col-span-1"
@@ -154,7 +154,8 @@ export default function Page() {
         </ProductSegmentation>
 
         <ProductSegmentation title="Solar Powered Fans">
-          <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
+          <div className="grid relative grid-cols-1 split:grid-cols-3 gap-6">
+            <RectangleSvg className="absolute bottom-[-40px] left-[-24px] split:left-[-64px] z-[-1] " />
             <Product className="col-span-1" {...fadeInViewportFxn(0)} image={solarfan1} title={'16" DC/AC Solar Fan'} category="Solar Powered Fans" />
             <Product
               className="col-span-1"
@@ -230,7 +231,7 @@ export default function Page() {
           </motion.div>
         </motion.div>
       </section>
-      <section className="contentMargin py-16">
+      <section className="contentMargin py-16 space-y-5 split:space-y-10">
         <SubHeading {...fadeInViewport}>A Sneak Peak into Our tory</SubHeading>
 
         <FactoryVideo />
@@ -243,7 +244,7 @@ export default function Page() {
           variants={StaggerParent()}
           whileInView="show"
           initial="hidden"
-          viewport={{ once: true, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.4 }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-6"
         >
           <CustomerReview image="./images/david.png" variants={AnimateToRight}>
