@@ -81,21 +81,21 @@ const Products = () => {
             category="Solar Powered Fans"
           />
           <Product
-            {...fadeInViewportFxn(0.3)}
+            {...fadeInViewportFxn(0.4)}
             className="col-span-1"
             image={solarfan3}
             title={'16" Remote Control fan, 11.1v4H Battery'}
             category="Solar Powered Fans"
           />
           <Product
-            {...fadeInViewportFxn(0.4)}
+            {...fadeInViewportFxn(0.1)}
             className="col-span-1"
             image={solarfan4}
             title={'12" Solar fan, 9v4AH'}
             category="Solar Powered Fans"
           />
           <Product
-            {...fadeInViewportFxn(0.5)}
+            {...fadeInViewportFxn(0.3)}
             className="col-span-1"
             image={solarfan5}
             title={'18"Solar fan, 12.1v4AH'}
@@ -107,23 +107,23 @@ const Products = () => {
       <ProductSegmentation title="Solar Powered Home Lighting Systems">
         <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
           <Product {...fadeInViewportFxn(0)} className="col-span-1" image={lighting1} title="Speaker System" category="Home Lighting Systems" />
-          <Product {...fadeInViewportFxn(0.1)} className="col-span-1" image={lighting2} title="Solar Home System" category="Home Lighting Systems" />
+          <Product {...fadeInViewportFxn(0.2)} className="col-span-1" image={lighting2} title="Solar Home System" category="Home Lighting Systems" />
           <Product
-            {...fadeInViewportFxn(0.2)}
+            {...fadeInViewportFxn(0.4)}
             className="col-span-1"
             image={lighting3}
             title="Lighting Speaker MP3/FM"
             category="Home Lighting Systems"
           />
           <Product
-            {...fadeInViewportFxn(0.3)}
+            {...fadeInViewportFxn(0.1)}
             className="col-span-1"
             image={lighting4}
             title="Lighting Speaker MP3/FM"
             category="Home Lighting Systems"
           />
           <Product
-            {...fadeInViewportFxn(0.4)}
+            {...fadeInViewportFxn(0.3)}
             className="col-span-1"
             image={lighting5}
             title="Lighting Speaker MP3/FM"
@@ -136,23 +136,23 @@ const Products = () => {
         <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
           <Product {...fadeInViewportFxn(0)} className="col-span-1" image={energy1} title="15Kwh po4 Battery " category="Energy Storage System" />
           <Product {...fadeInViewportFxn(0.2)} className="col-span-1" image={energy2} title="Solar Inverter" category="Energy Storage System" />
-          <Product {...fadeInViewportFxn(0.3)} className="col-span-1" image={energy3} title="15Kwh po4 Battery " category="Energy Storage System" />
+          <Product {...fadeInViewportFxn(0.4)} className="col-span-1" image={energy3} title="15Kwh po4 Battery " category="Energy Storage System" />
           <Product
-            {...fadeInViewportFxn(0.4)}
+            {...fadeInViewportFxn(0.1)}
             className="col-span-1"
             image={energy4}
             title="Stackable 15Kwh Battery "
             category="Energy Storage System"
           />
           <Product
-            {...fadeInViewportFxn(0.5)}
+            {...fadeInViewportFxn(0.3)}
             className="col-span-1"
             image={energy5}
             title="Stackable 15Kwh Battery "
             category="Energy Storage System"
           />
           <Product
-            {...fadeInViewportFxn(0.6)}
+            {...fadeInViewportFxn(0.5)}
             className="col-span-1"
             image={energy6}
             title="Solar Storage Battery"
@@ -171,29 +171,29 @@ const Products = () => {
             category="Small Inverter Series"
           />
           <Product
-            {...fadeInViewportFxn(0.1)}
+            {...fadeInViewportFxn(0.2)}
             className="col-span-1"
             image={inverter2}
             title="12v/500-2000w Inverter"
             category="Small Inverter Series"
           />
           <Product
-            {...fadeInViewportFxn(0.2)}
+            {...fadeInViewportFxn(0.4)}
             className="col-span-1"
             image={inverter3}
             title="800w, 1300w and 1800w Inverter"
             category="Small Inverter Series"
           />
-          <Product {...fadeInViewportFxn(0.3)} className="col-span-1" image={inverter4} title="12v/500w Inverter" category="Small Inverter Series" />
+          <Product {...fadeInViewportFxn(0.1)} className="col-span-1" image={inverter4} title="12v/500w Inverter" category="Small Inverter Series" />
           <Product
-            {...fadeInViewportFxn(0.4)}
+            {...fadeInViewportFxn(0.2)}
             className="col-span-1"
             image={inverter5}
             title="500w-2000w Inverter"
             category="Small Inverter Series"
           />
           <Product
-            {...fadeInViewportFxn(0.5)}
+            {...fadeInViewportFxn(0.4)}
             className="col-span-1"
             image={inverter6}
             title="500w-2000w Inverter"
