@@ -44,9 +44,15 @@ export default function Page() {
           Cut your electricity bills, increase your home’s value, and contribute to a cleaner planet with our reliable and affordable solar energy
           solutions.
         </p>
-        <Button {...shake} href="/products">
+        <motion.a
+          {...shake}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-yellow p-3 text-white font-bold block w-fit rounded-2xl"
+          href="https://wa.me/2347073846909?text=text=I'm%20interested%20in%20one%20of%20your%20solar%20products.%20Can%20you%20provide%20more%20details%20about%20the%3F"
+        >
           Shop Now
-        </Button>
+        </motion.a>
 
         <div id="banner" className="relative mt-10">
           <div className="relative aspect-[2.187] max-split:aspect-[366/510] w-full rounded-[20px] overflow-hidden">

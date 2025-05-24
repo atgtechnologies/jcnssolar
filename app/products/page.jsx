@@ -28,7 +28,8 @@ import inverter6 from "@/app/components/images/inverter 6.png";
 import generator1 from "@/app/components/images/300w-generator.jpg";
 import generator2 from "@/app/components/images/500w-generator.jpg";
 import SubHeading from "../components/subheading";
-import { cardVariants, fadeInViewportFxn, StaggerParent } from "../components/framer-constants";
+import { cardVariants, fadeInViewportFxn, shake, StaggerParent } from "../components/framer-constants";
+import * as motion from "framer-motion/client";
 
 export const metadata = {
   title: "Solar Products in Nigeria | Buy Inverters, Panels & Kits - JCNS Solar Solutions",
@@ -39,7 +40,17 @@ export const metadata = {
 const Products = () => {
   return (
     <div className="space-y-8 contentMargin">
-      <SubHeading>Our Product Gallery</SubHeading>
+      <div className="split:flex space-y-4 justify-between mb-6 items-center">
+        <SubHeading>Our Product Gallery</SubHeading>
+        <motion.a
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-yellow p-3 text-white font-bold block w-fit rounded-2xl"
+          href="https://wa.me/2347073846909?text=text=I'm%20interested%20in%20one%20of%20your%20solar%20products.%20Can%20you%20provide%20more%20details%20about%20the%3F"
+        >
+          Shop Now
+        </motion.a>
+      </div>
 
       <ProductSegmentation id="panels" title="Solar Panels">
         <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
