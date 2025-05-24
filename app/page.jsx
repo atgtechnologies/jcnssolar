@@ -131,23 +131,15 @@ export default function Page() {
               className="col-span-1"
               image={solar1}
               title="400W solar Panels"
-              category="Solar Powered Fans"
+              category="Solar Panels"
               imgCln="sm:px-[55px]"
             />
             <Product
               className="col-span-1"
               {...fadeInViewportFxn(0.2)}
               image={solar2}
-              title="600W Solar Panels"
-              category="Solar Powered Fans"
-              imgCln="sm:px-[55px]"
-            />
-            <Product
-              className="col-span-1"
-              {...fadeInViewportFxn(0.4)}
-              image={solar3}
-              title="800W Solar Panels"
-              category="Solar Powered Fans"
+              title="680W Solar Panels"
+              category="Solar Panels"
               imgCln="sm:px-[55px]"
             />
           </div>

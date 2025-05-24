@@ -22,13 +22,13 @@ export const metadata = {
     title: "JCNS Solar Solutions Nigeria | Solar Inverters, Panels & Renewable Energy Experts",
     description:
       "JCNS Solar Solutions provides top-quality solar inverters, panels, and complete renewable energy systems for homes and businesses in Nigeria. Go solar, save money, and enjoy reliable power.",
-    url: "https://jcnssolar.com.ng/",
+    url: "https://jcnssolar.ng/",
     type: "website",
     siteName: "JCNS Solar Solutions Nigeria",
     locale: "en_NG",
     images: [
       {
-        url: "https://jcnssolar.com.ng/images/social-media.png",
+        url: "https://jcnssolar.ng/images/social-media.png",
         width: 1200,
         height: 630,
         alt: "JCNS Solar Solutions - Solar Products in Nigeria",
@@ -42,10 +42,10 @@ export const metadata = {
       "JCNS Solar Solutions provides top-quality solar inverters, panels, and complete renewable energy systems for homes and businesses in Nigeria. Go solar, save money, and enjoy reliable power.",
     site: "@JCNS_NEWENERGY",
     creator: "@JCNS_NEWENERGY",
-    images: ["https://jcnssolar.com.ng/images/social-media.png"],
+    images: ["https://jcnssolar.ng/images/social-media.png"],
   },
   alternates: {
-    canonical: "https://jcnssolar.com.ng/",
+    canonical: "https://jcnssolar.ng/",
   },
   robots: {
     index: true,
@@ -68,8 +68,8 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "JCNS Solar Solutions Nigeria",
-              url: "https://jcnssolar.com.ng/",
-              logo: "https://jcnssolar.com.ng/images/social-media.png",
+              url: "https://jcnssolar.ng/",
+              logo: "https://jcnssolar.ng/images/social-media.png",
               contactPoint: [
                 {
                   "@type": "ContactPoint",
@@ -92,7 +92,7 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "JCNS Solar Solutions Nigeria",
-              url: "https://jcnssolar.com.ng/",
+              url: "https://jcnssolar.ng/",
             }),
           }}
         />
