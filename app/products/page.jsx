@@ -107,7 +107,7 @@ const Products = () => {
         </div>
       </ProductSegmentation>
 
-      <ProductSegmentation title="Solar Powered Home Lighting Systems">
+      <ProductSegmentation id="light" title="Solar Powered Home Lighting Systems">
         <div className="grid grid-cols-1 split:grid-cols-3 gap-6">
           <Product {...fadeInViewportFxn(0)} className="col-span-1" image={lighting1} title="Speaker System" category="Home Lighting Systems" />
           <Product {...fadeInViewportFxn(0.2)} className="col-span-1" image={lighting2} title="Solar Home System" category="Home Lighting Systems" />
