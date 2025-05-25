@@ -10,4 +10,4 @@ const SubHeading = ({ children, className, ...props }) => {
   );
 };
 
-export default motion(SubHeading);
+export default motion.create(SubHeading);

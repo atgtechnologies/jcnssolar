@@ -193,4 +193,4 @@ const CustomerReview = ({ children, image, ...props }) => {
   );
 };
 
-export default motion(CustomerReview);
+export default motion.create(CustomerReview);

@@ -9,7 +9,7 @@ const Footer = () => {
       </div>
       <div className="contentMargin md:flex py-16">
         <div>
-          <img src="./images/logo.png" className="w-[214px] md:me-[96px] mb-4 md:mb-10" />
+          <img src="/images/logo.png" className="w-[214px] md:me-[96px] mb-4 md:mb-10" />
           <ul className="space-y-4 text-sm">
             <li>25 Street, Ikeja, Lagos</li>
             <li>

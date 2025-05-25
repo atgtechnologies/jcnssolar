@@ -23,7 +23,7 @@ const Navbar = () => {
     <nav className="py-4 overflow-hidden">
       <div className="flex justify-between border-b-[#EFF0F3] border-b contentMargin max-split:max-w-full max-split:w-full">
         <Link href="/">
-          <img className="w-[100px] sm:w-[157px]" src="./images/logo.png" alt="Jcns Solar power Logo " />
+          <img className="w-[100px] sm:w-[157px]" src="/images/logo.png" alt="Jcns Solar power Logo " />
         </Link>
         <ul
           className={
@@ -45,7 +45,7 @@ const Navbar = () => {
           <NavLink href="/" active={pathname == "/" || pathname == ""}>
             Home
           </NavLink>
-          <NavLink href="/products" active={pathname == "/products"}>
+          <NavLink href="/products" active={pathname == "/products" || pathname.includes("/products/")}>
             Our Product
           </NavLink>
           <NavLink href="/about" active={pathname == "/about"}>

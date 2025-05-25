@@ -28,7 +28,7 @@ const FaqQuestions = () => {
           <li key={faq.id}>
             <button
               onClick={() => toggleFaq(faq.id)}
-              className="w-full text-left py-6 px-3 cursor-pointer rounded-[8px] border-2 border-[#E5E7EB] font-semibold"
+              className="w-full text-left py-6 px-3 cursor-pointer rounded-[8px] border-2 border-borderStroke font-semibold"
             >
               {faq.question}
             </button>

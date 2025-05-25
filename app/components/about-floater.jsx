@@ -11,4 +11,4 @@ const AboutFloater = ({ className, sub, children, ...props }) => {
   );
 };
 
-export default motion(AboutFloater);
+export default motion.create(AboutFloater);

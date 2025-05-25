@@ -10,4 +10,4 @@ const GreenCard = ({ children, label, ...props }) => {
   );
 };
 
-export default motion(GreenCard);
+export default motion.create(GreenCard);

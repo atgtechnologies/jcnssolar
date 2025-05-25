@@ -18,4 +18,4 @@ const Button = ({ children, className, href, type = "link", ...props }) => {
   );
 };
 
-export default motion(Button);
+export default motion.create(Button);

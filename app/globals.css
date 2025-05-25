@@ -7,6 +7,7 @@
   --color-primary: #00482f;
   --color-grayy: #6b7280;
   --color-yellow: #f18d01;
+  --color-borderStroke: #e5e7eb;
 }
 @font-face {
   font-family: "Satoshi Variable";
